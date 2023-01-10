@@ -1,0 +1,153 @@
+.carFrame {
+  height: 20rem;
+  width: 20rem;
+  margin: 0 3rem 3rem 0;
+  border-radius: 31px;
+  background: #e8e8e8;
+  box-shadow: inset 8px 8px 16px #c5c5c5, inset -8px -8px 16px #ffffff;
+}
+
+.overlay {
+  height: 20rem;
+  width: 20rem;
+  background-color: black;
+  border-radius: 31px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s;
+}
+
+.descriptionWrapper,
+.imgWrapper {
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carImg {
+  position: absolute;
+  object-fit: contain;
+  width: 18rem;
+  height: 18rem;
+  transition: transform 0.3s;
+  /* animation: car 4s linear 0s infinite; */
+}
+
+.description {
+  position: absolute;
+  text-align: center;
+  color: #f3f3f3;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+.bolderDescription {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 0.6s 0.15s;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.carFrame:hover .overlay {
+  opacity: 0.35;
+}
+
+.carFrame:hover .carImg {
+  transform: scale(1.1);
+  /* animation-play-state: paused; */
+}
+
+@media screen and (max-width: 1200px) {
+  .carImg {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .carFrame {
+    margin: 0 2rem 2rem 0;
+  }
+
+  .carFrame,
+  .descriptionWrapper,
+  .imgWrapper,
+  .overlay {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .description {
+    font-size: 1.8rem;
+  }
+
+  .bolderDescription {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carImg {
+    width: 70%;
+    height: 70%;
+  }
+
+  .carFrame {
+    margin: 0 0 2rem 0;
+  }
+
+  .carFrame,
+  .descriptionWrapper,
+  .imgWrapper,
+  .overlay {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .description {
+    font-size: 2.8rem;
+  }
+
+  .bolderDescription {
+    font-size: 3.3rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .description {
+    font-size: 2.2rem;
+  }
+
+  .bolderDescription {
+    font-size: 2.7rem;
+  }
+}
+/* 
+@keyframes car {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */

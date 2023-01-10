@@ -1,0 +1,91 @@
+.nav {
+  margin: 3rem 0 0 4rem;
+  height: 70%;
+  border-radius: 31px;
+  background: #e8e8e8;
+  box-shadow: inset 8px 8px 16px #c5c5c5, inset -8px -8px 16px #ffffff;
+  text-align: center;
+}
+
+.nav ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.nav ul a,
+.nav ul a:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: 900;
+  transition: font-weight 0.3s, font-size 0.3s;
+  display: block;
+}
+
+.nav ul li,
+.nav ul a,
+.nav ul a:visited {
+  margin: 2rem;
+  width: 14rem;
+}
+
+.nav ul a:hover {
+  font-weight: 600;
+  font-size: 2.7rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav ul {
+    font-size: 2rem;
+  }
+
+  .nav ul a:hover {
+    font-size: 2.2rem;
+  }
+
+  .nav ul li,
+  .nav ul a,
+  .nav ul a:visited {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    width: calc(100% - 6rem);
+    height: initial;
+    margin: 2rem 0 2rem 0;
+    padding: 0 1rem 0 1rem;
+    min-height: 7rem;
+  }
+
+  .nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    min-height: inherit;
+  }
+
+  .nav ul a,
+  .nav ul a:visited,
+  .nav ul li {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav ul {
+    font-size: 1.7rem;
+  }
+
+  .nav ul a:hover {
+    font-size: 1.9rem;
+  }
+
+  .nav ul li,
+  .nav ul a,
+  .nav ul a:visited {
+    width: 70px;
+  }
+}
