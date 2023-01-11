@@ -47,7 +47,7 @@
   .nav ul li,
   .nav ul a,
   .nav ul a:visited {
-    width: 100px;
+    width: 12rem;
   }
 }
 
@@ -86,6 +86,6 @@
   .nav ul li,
   .nav ul a,
   .nav ul a:visited {
-    width: 70px;
+    width: 7rem;
   }
 }

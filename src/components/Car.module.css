@@ -1,4 +1,5 @@
 .carFrame {
+  position: relative;
   height: 20rem;
   width: 20rem;
   margin: 0 3rem 3rem 0;
@@ -17,8 +18,8 @@
   transition: opacity 0.3s;
 }
 
-.descriptionWrapper,
-.imgWrapper {
+.imgWrapper,
+.descriptionWrapper {
   position: absolute;
   height: 20rem;
   width: 20rem;
@@ -33,7 +34,6 @@
   width: 18rem;
   height: 18rem;
   transition: transform 0.3s;
-  /* animation: car 4s linear 0s infinite; */
 }
 
 .description {
@@ -43,7 +43,6 @@
   font-size: 2.2rem;
   font-weight: 300;
   line-height: 1.5;
-  z-index: 1;
 }
 
 .bolderDescription {
@@ -67,7 +66,26 @@
 
 .carFrame:hover .carImg {
   transform: scale(1.1);
-  /* animation-play-state: paused; */
+}
+
+.icon,
+.scaledDown {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #f3f3f3;
+}
+
+.icon {
+  transform: scale(1);
+  transition: transform 0.25s 0.25s;
+}
+
+.scaledDown {
+  transform: scale(0);
+  transition: transform 0.25s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -94,6 +112,12 @@
 
   .bolderDescription {
     font-size: 2.3rem;
+  }
+
+  .icon,
+  .scaledDown {
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -122,6 +146,12 @@
   .bolderDescription {
     font-size: 3.3rem;
   }
+
+  .icon,
+  .scaledDown {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -132,22 +162,10 @@
   .bolderDescription {
     font-size: 2.7rem;
   }
+
+  .icon,
+  .scaledDown {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
-/* 
-@keyframes car {
-  0% {
-    transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */

@@ -9,6 +9,7 @@ function HomePage({ allCars }) {
       <div className={classes.allCars}>
         {allCars.map((car) => (
           <Car
+            key={car.id}
             manufacturer={car.manufacturer}
             model={car.model}
             image={car.image}
