@@ -1,11 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import Favourites from "./components/Favourites";
-import Navigation from "./components/Navigation";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCircleCheck as fasFaCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck as farFaCircleCheck } from "@fortawesome/free-regular-svg-icons";
+import HomePage from "./components/HomePage";
+import Favourites from "./components/Favourites";
+import Navigation from "./components/Navigation";
+import { useState } from "react";
 
 library.add(fasFaCircleCheck, farFaCircleCheck);
 
