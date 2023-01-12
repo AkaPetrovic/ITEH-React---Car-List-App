@@ -1,3 +1,23 @@
 .heading {
+  display: block;
   font-size: 4rem;
 }
+.favourites {
+  flex-grow: 1;
+  margin: 0 2rem 0 0;
+}
+
+.allCars {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .favourites {
+    margin: 0;
+    width: calc(100% - 4rem);
+  }
+}
+
+

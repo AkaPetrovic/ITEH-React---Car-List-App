@@ -1,0 +1,313 @@
+.carWrapper {
+  display: flex;
+}
+
+.carDetails {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 3rem;
+  font-size: 1.5rem;
+  color: #f3f3f3;
+  width: 100%;
+}
+
+.specs span {
+  color: turquoise;
+}
+
+.specs p {
+  margin: 0.2rem 2rem;
+}
+
+.detailsButton {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #333;
+  padding: 1.5rem 2.5rem;
+  border-style: none;
+  border-radius: 31px;
+  background: #e8e8e8;
+  box-shadow: inset 8px 8px 16px #c5c5c5, inset -8px -8px 16px #ffffff;
+}
+
+.detailedDescriptionWrapper {
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+}
+
+.detailedDescription {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: calc(100% - 11rem);
+  font-size: 1.8rem;
+  width: 50%;
+  min-width: 19.5rem;
+  border-radius: 31px;
+  background: #e8e8e8;
+  box-shadow: inset 8px 8px 16px #c5c5c5, inset -8px -8px 16px #ffffff;
+  transition: max-height 0.5s;
+}
+
+.showDescription {
+  max-height: 11rem;
+  transition: max-height 0.5s;
+}
+
+.data {
+  margin: 0 0 1rem 2.5rem;
+}
+
+.data:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.data:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.data span {
+  color: turquoise;
+}
+
+.carFrame {
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+  margin: 0 3rem 0 0;
+  border-radius: 31px;
+  background: #e8e8e8;
+  box-shadow: inset 8px 8px 16px #c5c5c5, inset -8px -8px 16px #ffffff;
+}
+
+.overlay {
+  height: 20rem;
+  width: 20rem;
+  background-color: black;
+  border-radius: 31px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s;
+}
+
+.imgWrapper,
+.descriptionWrapper {
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carImg {
+  position: absolute;
+  object-fit: contain;
+  width: 18rem;
+  height: 18rem;
+  transition: transform 0.3s;
+}
+
+.description {
+  position: absolute;
+  text-align: center;
+  color: turquoise;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.bolderDescription {
+  color: #f3f3f3;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 0.6s 0.15s;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.carFrame:hover .overlay {
+  opacity: 0.35;
+}
+
+.carFrame:hover .carImg {
+  transform: scale(1.1);
+}
+
+.icon,
+.scaledDown {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #f3f3f3;
+}
+
+.icon {
+  transform: scale(1);
+  transition: transform 0.25s 0.25s;
+}
+
+.scaledDown {
+  transform: scale(0);
+  transition: transform 0.25s;
+}
+
+@media screen and (max-width: 1200px) {
+  .detailsButton {
+    font-size: 1.2rem;
+  }
+
+  .detailedDescription {
+    font-size: 1.5rem;
+    top: calc(100% - 10.5rem);
+  }
+
+  .showDescription {
+    max-height: 10.5rem;
+    transition: max-height 0.5s;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .carImg {
+    height: 12rem;
+    width: 12rem;
+  }
+  .carFrame,
+  .overlay,
+  .imgWrapper,
+  .descriptionWrapper {
+    height: 14rem;
+    width: 14rem;
+  }
+
+  .data {
+    margin: 0 0 0.5rem 2.2rem;
+  }
+
+  .data:first-of-type {
+    margin-top: 1.2rem;
+  }
+
+  .data:last-of-type {
+    margin-bottom: 1.2rem;
+  }
+
+  .detailsButton {
+    font-size: 1.2rem;
+    padding: 1rem 2.2rem;
+  }
+
+  .detailedDescription {
+    font-size: 1.5rem;
+    top: calc(100% - 9rem);
+  }
+
+  .showDescription {
+    max-height: 9rem;
+    transition: max-height 0.5s;
+  }
+
+  .description {
+    font-size: 1.8rem;
+  }
+
+  .bolderDescription {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .carFrame {
+    margin: 0 2rem 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .detailedDescriptionWrapper {
+    margin: 0;
+  }
+
+  .detailedDescription {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carFrame {
+    margin: 0;
+    width: calc(90vw - calc(90vw - 100%));
+    height: 90vw;
+  }
+
+  .carImg {
+    width: 70%;
+    height: 70%;
+  }
+
+  .descriptionWrapper,
+  .imgWrapper,
+  .overlay {
+    width: 100%;
+    height: 100%;
+  }
+
+  .description {
+    font-size: 2.5rem;
+  }
+
+  .bolderDescription {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .description {
+    font-size: 2rem;
+  }
+
+  .bolderDescription {
+    font-size: 2.5rem;
+  }
+
+  .specs{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .specs{
+    bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .description {
+    font-size: 1.8rem;
+  }
+
+  .bolderDescription {
+    font-size: 2.3rem;
+  }
+}

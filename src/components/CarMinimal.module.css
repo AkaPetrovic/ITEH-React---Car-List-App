@@ -39,13 +39,14 @@
 .description {
   position: absolute;
   text-align: center;
-  color: #f3f3f3;
+  color: turquoise;
   font-size: 2.2rem;
   font-weight: 300;
   line-height: 1.5;
 }
 
 .bolderDescription {
+  color:#f3f3f3;
   font-size: 3rem;
   font-weight: 600;
 }

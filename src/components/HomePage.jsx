@@ -1,18 +1,22 @@
 import React from "react";
 import classes from "./HomePage.module.css";
-import Car from "./Car";
+import CarMinimal from "./CarMinimal";
+import Heading from "./Heading";
 
-function HomePage({ allCars }) {
+function HomePage({ allCars, addToFavourites }) {
   return (
-    <div className={classes.main}>
-      <h1 className={classes.heading}>Home page</h1>
+    <div className={classes.home}>
+      <Heading title="Home page" />
       <div className={classes.allCars}>
         {allCars.map((car) => (
-          <Car
+          <CarMinimal
             key={car.id}
+            id={car.id}
             manufacturer={car.manufacturer}
             model={car.model}
             image={car.image}
+            isFavourite={car.isFavourite}
+            addToFavourites={addToFavourites}
           />
         ))}
       </div>

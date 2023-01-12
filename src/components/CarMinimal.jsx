@@ -1,14 +1,20 @@
 import React from "react";
-import classes from "./Car.module.css";
+import classes from "./CarMinimal.module.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Car({ manufacturer, model, image }) {
+function CarMinimal({
+  id,
+  manufacturer,
+  model,
+  image,
+  isFavourite,
+  addToFavourites,
+}) {
   const [descIsHidden, setDescIsHidden] = useState(true);
-  const [isFavourite, setIsFavourite] = useState(false);
 
-  function changeIcons() {
-    setIsFavourite((prevState) => !prevState);
+  function handleAddCarToFavourites() {
+    addToFavourites(id);
   }
 
   function handleDescription() {
@@ -45,20 +51,20 @@ function Car({ manufacturer, model, image }) {
         </p>
 
         <FontAwesomeIcon
-          onClick={changeIcons}
+          onClick={handleAddCarToFavourites}
           icon="fa-regular fa-circle-check"
           className={isFavourite ? classes.scaledDown : classes.icon}
         />
 
         <FontAwesomeIcon
-          onClick={changeIcons}
+          onClick={handleAddCarToFavourites}
           icon="fa-solid fa-circle-check"
-          size="3x"
           className={isFavourite ? classes.icon : classes.scaledDown}
+          style={{ color: "turquoise" }}
         />
       </div>
     </div>
   );
 }
 
-export default Car;
+export default CarMinimal;

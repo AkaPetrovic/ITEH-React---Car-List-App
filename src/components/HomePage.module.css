@@ -1,11 +1,8 @@
-.heading {
-  font-size: 4rem;
-  margin: 2.5rem 0 4rem 0;
-}
-
-.main {
+.home {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  margin: 0 2rem 0 0;
 }
 
 .allCars {
@@ -14,25 +11,25 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .heading {
     font-size: 3.5rem;
   }
-}
+} */
 
 @media screen and (max-width: 600px) {
-  .main {
+  .home {
     padding: 0 2rem;
   }
 
-  .heading {
+  /* .heading {
     font-size: 3rem;
     margin: 0 0 2.5rem 0;
-  }
+  } */
 }
 
 @media screen and (max-width: 600px) {
-  .main {
+  .home {
     width: calc(100% - 4rem);
   }
 }
@@ -43,14 +40,14 @@
     align-items: center;
   }
 
-  .heading {
+  /* .heading {
     font-size: 4.5rem;
     margin: 0 0 2.5rem 0;
-  }
+  } */
 }
 
-@media screen and (max-width: 350px) {
+/* @media screen and (max-width: 350px) {
   .heading {
     font-size: 3rem;
   }
-}
+} */
